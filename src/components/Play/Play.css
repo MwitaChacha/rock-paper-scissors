@@ -1,0 +1,72 @@
+.choice-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 22rem;
+  width: 25rem;
+}
+
+.triangle {
+  position: absolute;
+  align-self: center;
+}
+
+.choice-section .icon {
+  display: flex;
+  margin: 0 4rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.paper-choice {
+  background-color: #ffff;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  border: 1.2rem solid hsl(230, 89%, 62%);
+  box-shadow: inset 0px 5px 2px #d3d3d3, 0px 8px hsl(230, 57%, 50%);
+  transform: translateX(1.1rem);
+}
+
+.rock-choice {
+  background-color: #ffff;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  border: 1.2rem solid hsl(349, 71%, 52%);
+  box-shadow: inset 0px 5px 2px #d3d3d3, 0px 6px hsl(349, 79%, 36%);
+  transform: translateX(1.5rem);
+}
+
+.scissors-choice {
+  background-color: #ffff;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  border: 1.2rem solid hsl(39, 89%, 49%);
+  box-shadow: inset 0px 5px 2px #d3d3d3, 0px 6px hsl(39, 86%, 37%);
+  transform: translateX(1.5rem);
+}
+
+.icon:hover {
+  transform: scale(1.05);
+  transition: 250ms;
+}
+.winner {
+  animation: ripple-effect 0.6s linear infinite;
+}
+
+@keyframes ripple-effect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(237, 243, 237, 0.1),
+      0 0 0 40px rgba(237, 243, 237, 0.1), 0 0 0 70px rgba(237, 243, 237, 0.1),
+      0 0 0 100px rgba(237, 243, 237, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 40px rgba(237, 243, 237, 0.1),
+      0 0 0 70px rgba(237, 243, 237, 0.1), 0 0 0 100px rgba(237, 243, 237, 0.1),
+      0 0 0 120px rgba(237, 243, 237, 0);
+  }
+}

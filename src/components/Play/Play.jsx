@@ -24,6 +24,7 @@ const Play = () => {
     houseGeneratedChoice();
   };
 
+  // Function that generates the house choice
   const houseGeneratedChoice = () => {
     const randomHouseChoice =
       choices[Math.floor(Math.random() * choices.length)];
@@ -34,6 +35,8 @@ const Play = () => {
   const playAgain = () => {
     setStart(false);
   };
+
+  // The logic that determines how the game ends
   const outcome = () => {
     if (playerChoice === "rock" && houseChoice === "scissors") {
       setPlayerWin(true);
@@ -85,6 +88,7 @@ const Play = () => {
   useEffect(() => {
     outcome();
   }, [houseChoice, playerChoice]);
+  
   return (
     <div>
       <div className="my-8 flex justify-between md:w-1/2 sm:72 md:mx-auto mx-10 border rounded-lg border-slate-500 border-2">
